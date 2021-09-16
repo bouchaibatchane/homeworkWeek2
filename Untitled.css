@@ -2,3 +2,12 @@ body{
     margin:0;
     padding:0
 }
+.lbl{
+    color:saddlebrown;
+    background-color: seagreen;
+    width: 20%;
+    padding: 5px;
+    margin:10px;
+    margin-top: 10px
+    ;
+}
