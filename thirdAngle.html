@@ -8,14 +8,14 @@
 </head>
 
 <body>
-    <form >
-        <label>Enter your meal price</label>
-        <input type="number" id="mealPrice" name="meal">
+    <form>
+        <label>Enter The First Angle</label>
+        <input type="number" id="FirstAngle" name="FirstAngle">
         <br>
-        <label>Enter your tip percentage</label>
-        <input type="number" id="tipPrcnt" name="meal">
+        <label>Enter The Second Angle</label>
+        <input type="number" id="SecondAngle" name="SecondAngle">
         <br>
-        <input type="submit" id="cal" value="calculat your total amount">
+        <input type="submit" id="cal" value="calculat the Third Angle">
     </form>
     <div id="here" class="colored"></div>
 
@@ -32,14 +32,14 @@
 
 
             // get the vars from the user
-            const ml = parseFloat($("#mealPrice").value);
-            const tp = parseFloat($("#tipPrcnt").value);
-            // calcul the las price 
-            const tipAmount = (ml * tp) / 100;
-            const lastPrice = tipAmount + ml;
+            const first = parseFloat($("#FirstAngle").value);
+            const second = parseFloat($("#SecondAngle").value);
+            // calcul the third angle 
+            const third = 180 - (first + second);
+
 
             // disply the result
-            $("#here").innerHTML = "The Total Amount You Will Pay Today is :" + " " + lastPrice + "$";
+            $("#here").innerHTML = "The Third Angle of The Triangle is :" + " " + third;
 
         };
 

@@ -29,7 +29,7 @@ button{
     display: block;
     margin: 10px 50% ;
 }
-#here{
+.colored{
     background-color: slategrey;
     width: 10%;
     text-align: center;

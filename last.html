@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="untitled.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>please enter width of the rectangle</label>
+        <input type="number" id="widthRect" name="rectangle width">
+        <br>
+        <label>please  enter legnth of the rectangle</label>
+        <input type="number" id="lengthRect" name="rectangle legnth">
+        <br>
+        <input type="submit" id="cal" value="calculat">
+    </form>
+    <div id="area" class="colored"></div>
+    <div id="piremter" class="colored"></div>
+
+    <script>
+        const $ = selector => {
+            return document.querySelector(selector);
+        };
+
+        // this the function we will use to calulate 
+        const calulator = event => {
+
+            // stop page reload on form submit
+            event.preventDefault();
+
+
+            // get the vars from the user
+            const width = parseFloat($("#widthRect").value);
+            const length = parseFloat($("#lengthRect").value);
+            
+            // calcul the area of the rectangle 
+            const area = width * length;
+
+            //calcul the piremter of the rectangle 
+            const piremter = 2 * (width + length);
+
+            // disply the result
+            $("#area").innerHTML = "The Third Angle of The Triangle is :" + " " + area;
+            $("#piremter").innerHTML = "The Third Angle of The Triangle is :" + " " + piremter;
+
+
+
+        };
+
+        // add event to the button
+        $("#cal").addEventListener("click", calulator);
+    </script>
+</body>
+
+</html>
