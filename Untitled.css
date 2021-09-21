@@ -2,12 +2,37 @@ body{
     margin:0;
     padding:0
 }
-.lbl{
-    color:saddlebrown;
+label{
     background-color: seagreen;
-    width: 20%;
     padding: 5px;
-    margin:10px;
-    margin-top: 10px
-    ;
+    border-radius: 20px;
+    box-shadow: saddlebrown 0px 4px 20px;
+}
+form{
+    background-color:rgb(148, 233, 205);
+    width: 40%;
+    margin-left: 30%;
+    height: 50%;
+    margin-top: 10%;
+    padding: 20px;
+    text-align: center;
+
+
+}
+input{
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+button{
+    width: 40px;
+    height: 20px;
+    display: block;
+    margin: 10px 50% ;
+}
+#here{
+    background-color: slategrey;
+    width: 10%;
+    text-align: center;
+    padding: 5px;
+    margin-left: 45%;
 }

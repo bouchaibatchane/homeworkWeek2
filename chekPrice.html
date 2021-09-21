@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="untitled.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="email_2">
+        <label>Enter your meal price</label>
+        <input type="number" id="mealPrice" name="meal">
+        <br>
+        <label>Enter your tip percentage</label>
+        <input type="number" id="tipPrcnt" name="meal">
+        <br>
+        <input type="submit" id="cal" value="calculat your total amount">
+    </form>
+    <div id="here"></div>
+
+    <script>
+        const $ = selector => {
+            return document.querySelector(selector);
+        };
+
+        // this the function we will use to calulate 
+        const calulator = event => {
+
+            // stop page reload on form submit
+            event.preventDefault();
+
+
+            // get the vars from the user
+            const ml = parseFloat($("#mealPrice").value);
+            const tp = parseFloat($("#tipPrcnt").value);
+            // calcul the las price 
+            const tipAmount = (ml * tp) / 100;
+            const lastPrice = tipAmount + ml;
+
+            // disply the result
+            $("#here").innerHTML = "The Total Amount You Will Pay Today is :" + " " + lastPrice + "$";
+
+        };
+
+        // add event to the button
+        $("#cal").addEventListener("click", calulator);
+    </script>
+</body>
+
+</html>
